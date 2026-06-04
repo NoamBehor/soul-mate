@@ -3,6 +3,7 @@
     "name": "mobile-app",
     "slug": "mobile-app",
     "version": "1.0.0",
+    "jsEngine": "hermes",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "mobileapp",
@@ -38,11 +39,23 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#7c3aed",
+          "sounds": []
+        }
       ]
     ],
+    "extra": {
+      "eas": {
+        "projectId": "YOUR_EAS_PROJECT_ID_HERE"
+      }
+    },
     "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
+      "typedRoutes": true
     }
   }
 }

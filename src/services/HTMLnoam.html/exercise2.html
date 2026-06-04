@@ -1,0 +1,264 @@
+    <!DOCTYPE html>
+    <html lang="he" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>דף עבודה CSS - 10 תרגילים</title>
+        <style>
+            /* עיצוב כללי לרקע הדף כדי שיהיה נעים לעין */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f9;
+                margin: 20px;
+                padding: 10px;
+            }
+
+            /* סגנון כללי לתיבות שמפרידות בין התרגילים בדף העבודה */
+            .exercise-box {
+                background-color: #ffffff;
+                border: 1px dashed #b2bec3;
+                padding: 20px;
+                margin-bottom: 40px;
+                border-radius: 8px;
+            }
+            
+            .exercise-label {
+                font-size: 14px;
+                color: #7f8c8d;
+                margin-bottom: 10px;
+                display: block;
+                font-weight: bold;
+            }
+
+            /* ==========================================
+            תרגיל 1 – כותרת ראשית 
+            ========================================== */
+            h1 {
+                color: #ffffff;          /* צבע טקסט */
+                background-color: #2c3e50; /* צבע רקע */
+                padding: 20px;           /* ריווח פנימי */
+                text-align: center;      /* מרכוז הטקסט */
+            }
+
+            /* ==========================================
+            תרגיל 2 – פסקה מעוצבת 
+            ========================================== */
+            .intro-p {
+                color: #27ae60;       /* צבע טקסט שונה מהברירת מחדל */
+                background-color: #e8f8f5; /* צבע רקע עדין */
+                padding: 15px;        /* ריווח פנימי */
+                margin-top: 25px;     /* ריווח חיצוני מהכותרת שמעליה */
+            }
+
+            /* ==========================================
+            תרגיל 3 – שימוש ב־class 
+            ========================================== */
+            .highlight-bg {
+                background-color: #ffeaa7; /* צבע רקע משותף לשתי הפסקאות */
+                padding: 10px;
+                margin-bottom: 5px;
+            }
+
+            /* ==========================================
+            תרגיל 4 – שימוש ב־id 
+            ========================================== */
+            #unique-subtitle {
+                color: #9b59b6;            /* צבע טקסט מיוחד */
+                border: 2px solid #8e44ad; /* הוספת border */
+                padding: 10px;             /* הוספת padding */
+            }
+
+            /* ==========================================
+            תרגיל 5 – תמונה מעוצבת 
+            ========================================== */
+            .styled-img {
+                width: 200px;                 /* קביעת רוחב לתמונה */
+                border: 4px solid #34495e;    /* הוספת border */
+                margin: 20px 0;               /* margin מעל ומתחת לתמונה */
+                border-radius: 12px;          /* פינות מעט מעוגלות */
+            }
+
+            /* ==========================================
+            תרגיל 6 – כרטיס תוכן 
+            ========================================== */
+            .content-card {
+                background-color: #dfe6e9; /* צבע רקע */
+                padding: 20px;             /* הוסיפו padding */
+                margin: 15px 0;            /* הוסיפו margin */
+                border: 2px solid #b2bec3; /* הוסיפו border */
+                box-sizing: border-box;    /* הגדירו box-sizing: border-box */
+                width: 100%;               /* הגדרת רוחב כדי לראות את השפעת ה-box-sizing */
+            }
+            .content-card img {
+                width: 150px;
+                border-radius: 4px;
+            }
+
+            /* ==========================================
+            תרגיל 7 – שני כרטיסים עם אותו class 
+            ========================================== */
+            .shared-card {
+                border: 2px solid #e67e22; /* border */
+                padding: 15px;             /* padding */
+                margin: 15px 0;            /* margin */
+                background-color: #fdf2e9; /* צבע רקע */
+                border-radius: 6px;
+            }
+
+            /* ==========================================
+            תרגיל 8 – הבדל בין margin ל־padding 
+            ========================================== */
+            .box-padding {
+                background-color: #fab1a0;
+                border: 2px solid #d63031;
+                padding: 50px;             /* padding גדול (דוחף את התוכן פנימה) */
+            }
+
+            .box-margin {
+                background-color: #74b9ff;
+                border: 2px solid #0984e3;
+                margin: 50px 0;            /* margin גדול (דוחף אלמנטים אחרים החוצה) */
+            }
+
+            /* ==========================================
+            תרגיל 9 – עיצוב אלמנטים שונים 
+            ========================================== */
+            .ex9-h1 { color: #1abc9c; text-shadow: 1px 1px 2px #ccc; }
+            .ex9-h2 { color: #e67e22; border-bottom: 2px solid #e67e22; padding-bottom: 5px; }
+            .ex9-p1 { color: #34495e; font-style: italic; margin-bottom: 15px; }
+            .ex9-p2 { color: #7f8c8d; background-color: #f1f2f6; padding: 10px; }
+            .ex9-img { width: 120px; border: 3px double #2ecc71; }
+
+            /* ==========================================
+            תרגיל 10 – דף פרופיל אישי 
+            ========================================== */
+            #profile-page {
+                background-color: #ffffff;
+                border: 3px solid #2980b9;       /* שימוש ב-border */
+                padding: 25px;                   /* שימוש ב-padding */
+                margin: 30px 0;                  /* שימוש ב-margin */
+                box-sizing: border-box;          /* שימוש ב-box-sizing */
+                border-radius: 10px;
+            }
+
+            #profile-title {                     /* שימוש ב-id לפרופיל */
+                color: #2980b9;                  /* שימוש בצבע טקסט */
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 10px;
+            }
+
+            .profile-pic {                      /* שימוש ב-class לפרופיל */
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 3px solid #2980b9;
+                margin: 15px 0;
+            }
+
+            .profile-bio {
+                color: #555555;
+                line-height: 1.6;
+            }
+
+            .hobbies-list {
+                background-color: #f7f9fa;       /* שימוש בצבע רקע */
+                padding: 15px 30px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="exercise-box">
+            <span class="exercise-label">תרגיל 1 – כותרת ראשית</span>
+            <h1>הכותרת הראשית שלי</h1>
+        </div>
+
+        <div class="exercise-box">
+            <span class="exercise-label">תרגיל 2 – פסקה מעוצבת</span>
+            <p class="intro-p">שלום! אני סטודנט לפיתוח אתרים, אוהב טכנולוגיה ונהנה ללמוד איך לעצב דברים יפים בעזרת קוד CSS.</p>
+        </div>
+
+        <div class="exercise-box">
+            <span class="exercise-label">תרגיל 3 – שימוש ב־class</span>
+            <p class="highlight-bg">פסקה ראשונה - משתמשת ב-class ומקבלת רקע צהוב.</p>
+            <p class="highlight-bg">פסקה שנייה - משתמשת באותו class ומקבלת גם היא רקע צהוב.</p>
+            <p>פסקה שלישית - ללא class, נשארת בעיצוב ברירת המחדל של הדף.</p>
+        </div>
+
+        <div class="exercise-box">
+            <span class="exercise-label">תרגיל 4 – שימוש ב־id</span>
+            <h2 id="unique-subtitle">כותרת משנה עם עיצוב ייחודי מבוסס ID</h2>
+        </div>
+
+        <div class="exercise-box">
+            <span class="exercise-label">תרגיל 5 – תמונה מעוצבת</span>
+            <img src="https://picsum.photos/300/200" alt="תמונה מעוצבת" class="styled-img">
+        </div>
+
+        <div class="exercise-box">
+            <span class="exercise-label">תרגיל 6 – כרטיס תוכן</span>
+            <div class="content-card">
+                <h2>כותרת הכרטיס</h2>
+                <p>זהו טקסט בתוך כרטיס התוכן שמסביר על מודל הקופסה של ה-div.</p>
+                <img src="https://picsum.photos/150/100" alt="תמונת כרטיס">
+            </div>
+        </div>
+
+        <div class="exercise-box">
+            <span class="exercise-label">תרגיל 7 – שני כרטיסים עם אותו class</span>
+            <div class="shared-card">
+                <h2>כרטיס מספר 1</h2>
+                <p>אני משתמש ב-class משותף לעיצוב אחיד.</p>
+            </div>
+            <div class="shared-card">
+                <h2>כרטיס מספר 2</h2>
+                <p>גם אני נראה בדיוק אותו דבר בזכות אותו ה-class!</p>
+            </div>
+        </div>
+
+        <div class="exercise-box">
+            <span class="exercise-label">תרגיל 8 – הבדל בין margin ל־padding</span>
+            <div class="box-padding">
+                <strong>הדגמת Padding:</strong> הריווח הגדול נמצא <strong>בתוך</strong> התיבה, בין הטקסט לבין המסגרת האדומה.
+            </div>
+            <div class="box-margin">
+                <strong>הדגמת Margin:</strong> הריווח הגדול נמצא <strong>מחוץ</strong> לתיבה, ומיועד להרחיק אותה מהאלמנטים שמסביבה.
+            </div>
+        </div>
+
+        <div class="exercise-box">
+            <span class="exercise-label">תרגיל 9 – עיצוב אלמנטים שונים</span>
+            <h1 class="ex9-h1">כותרת h1 ייחודית</h1>
+            <h2 class="ex9-h2">כותרת h2 עם קו תחתון</h2>
+            <p class="ex9-p1">פסקה ראשונה מעוצבת בכתב נטוי.</p>
+            <p class="ex9-p2">פסקה שנייה מעוצבת עם רקע אפרפר מותאם.</p>
+            <img src="https://picsum.photos/120/120" alt="תמונת תרגיל 9" class="ex9-img">
+        </div>
+
+        <div class="exercise-box">
+            <span class="exercise-label">תרגיל 10 – דף פרופיל אישי קיבוצי</span>
+            
+            <div id="profile-page">
+                <h1 id="profile-title">ישראל ישראלי</h1>
+                <img src="https://picsum.photos/150" alt="תמונת פרופיל" class="profile-pic">
+                
+                <p class="profile-bio">
+                    שלום, שמי ישראל ואני מפתח קצה-קדמי (Frontend) מתחיל. 
+                    הדף הזה נבנה כסיכום מקיף של כל חוקי ה-CSS הבסיסיים שלמדתי, 
+                    תוך שימוש נכון במודל הקופסה (Box Model) ובסלקטורים שונים.
+                </p>
+                
+                <h3>התחביבים שלי:</h3>
+                <ul class="hobbies-list">
+                    <li>כתיבת קוד נקי ותקני</li>
+                    <li>עיצוב ממשקי משתמש (UI)</li>
+                    <li>קריאת ספרים מקצועיים</li>
+                    <li>רכיבה על אופניים בסופי שבוע</li>
+                </ul>
+            </div>
+            
+        </div>
+
+    </body>
+    </html>

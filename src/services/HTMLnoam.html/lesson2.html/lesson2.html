@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>תרגול Flexbox</title>
+    <style>
+        /* ה"אבא" - הוא זה שקובע שהילדים יהיו אחד ליד השני */
+        .main-container {
+            display: flex;
+            gap: 20px; /* יוצר רווח של 20 פיקסלים בין התיבות */
+            justify-content: center; /* ממרכז את התיבות בדף */
+            padding: 20px;
+        }
+
+        /* עיצוב כללי ל"ילדים" */
+        .box {
+            width: 200px;
+            height: 150px;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        .box-1 {
+            background-color: #ff5733;
+        }
+
+        .box-2 {
+            background-color: #33ff57;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="box box-1">
+            <h3>תיבה 1</h3>
+            <p>אני בצד ימין</p>
+        </div>
+
+        <div class="box box-2">
+            <h3>תיבה 2</h3>
+            <p>אני בצד שמאל</p>
+        </div>
+    </div>
+
+</body>
+</html>
